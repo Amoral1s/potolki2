@@ -1,7 +1,412 @@
 @import "reset"
+.title
+  font-family: $bold
+  font-size: 34px
+  margin-bottom: 20px
+.button
+  background-color: $main
+  color: #fff
+  font-size: 18px
+  border: 0
+  border-radius: 3px
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 320px
+  height: 60px
+  box-shadow: 0 5px 25px rgba(0,0,0,0.6)
+  cursor: pointer
+  transition: 0.6s
+  &:hover
+    transition: 0.6s
+    color: #000
+    background-color: $light
+.header
+  &-top
+    &-wrap
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-top: 10px
+      &-left
+        a
+          display: flex
+          align-items: center
+          font-size: 24px
+          font-family: $bold
+          color: #000
+          img
+            margin-right: 5px
+      &-center
+        ul
+          display: flex
+          justify-content: space-between
+          align-items: center
+          li
+            position: relative
+            a
+              padding: 5px
+              font-size: 16px
+              color: #000
+              font-family: $bold
+          li.menu-item-has-children
+            ul
+              position: absolute
+              display: none
+              min-width: 160px
+              top: 22px
+              background-color: #fff
+              box-shadow: 0 5px 5px rgba(0,0,0,0.1)
+              li
+                display: flex
+                width: 100%
+                a
+                  display: flex
+                  width: 100%
+                  padding: 4px 15px
+                  display: flex
+                  &:hover
+                    background-color: $main
+                    color: #fff
+      &-right
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        a:first-child
+          color: #000000
+          font-family: $bold
+          font-size: 16px
+          margin-bottom: 5px
+        a:last-child
+          color: $main
+          font-size: 18px
+  &-main
+    min-height: 800px
+    display: flex
+    justify-content: center
+    align-items: center
+    background-image: url(../img/bg.png)
+    background-size: cover
+    background-position: center center
+    button
+      margin-bottom: 100px
+      width: 270px
+      margin-top: 20px
+    h1
+      font-size: 40px
+      text-transform: uppercase
+      line-height: 42px
+      margin-right: 300px
+      span
+        font-size: 52px
+        line-height: 48px
+.service
+  padding: 20px 0
+  min-height: 800px
+  &-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    &-item
+      div.button
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 240px
+        opacity: 0
+        transition: 0.6s
+        z-index: 12
+        &:hover
+          background-color: $main
+          color: #fff
+      display: flex
+      position: relative
+      flex-basis: 31%
+      margin-bottom: 25px
+      min-height: 235px
+      align-items: flex-end
+      justify-content: center
+      cursor: pointer
+      transition: 0.6s
+      &:hover div.button
+        opacity: 1
+      &:hover
+        span
+          height: 100%
+          transition: 0.6s
+          align-items: flex-end
+          line-height: 50px
+
+      span
+        z-index: 10
+        color: #fff
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 50px
+        font-family: $bold
+        padding: 0 20px
+        text-align: center
+        margin-bottom: 0px
+        background-color: rgba(0,0,0,0.5)
+        font-size: 16px
+        transition: 0.6s
+      img
+        width: 100%
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+.portfolio
+  &-wrap
+    &-item
+      padding: 20px
+      &-top
+        img
+          width: 100%!important
+          height: auto!important
+      &-bot
+        h4
+          font-size: 20px
+          margin-bottom: 20px
+          margin-top: 10px
+        p
+          b
+            margin-left: 2px
+            font-size: 16px
+            font-family: $bold
+            font-weight: 700
+  button.slick-arrow
+    position: absolute
+    top: 38%
+    transform: translateY(-50%)
+    font-size: 0
+    background: transparent
+    border: 0
+    border-radius: 50%
+    background-image: url(../img/icons/back.svg)
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    height: 20px
+    width: 20px
+    cursor: pointer
+    &:focus
+      outline: none
+  button.slick-next
+    right: -10px
+    z-index: 10
+    transform: translateY(-50%) rotate(180deg)
+  button.slick-prev
+    left: -10px
+    z-index: 10
+.footer
+  padding: 30px 0 0 0 
+  &-title
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 30px 0
+    font-size: 18px
+    background-color: #fff
+  &-main
+    background-color: $accent
+    padding: 60px 0
+    div.title
+      text-align: center
+      width: 100%
+      margin-top: 30px
+      margin-bottom: 20px
+    &-wrap
+      &-map
+        border-radius: 15px
+        background-color: #ffffff
+        padding: 40px
+        img
+          width: 100%
+          height: auto
+          margin-top: 20px
+        p
+          font-size: 16px
+          line-height: 20px
+      &-toggle
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 40px
+        margin-top: 30px
+        div
+          padding: 10px
+          display: flex
+          width: 160px
+          justify-content: center
+          align-items: center
+          color: #fff
+          cursor: pointer
+        div:first-child
+          background-color: $main
+          border-radius: 13px 0 0 13px
+        div:last-child
+          background-color: $light
+          color: #000000
+          border-radius: 0 13px 13px 0
+      &-top
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-around
+        &-item
+          display: flex
+          flex-direction: column
+          justify-content: center
+          flex-basis: 50%
+          margin-bottom: 20px
+          b
+            margin-bottom: 5px
+            font-size: 20px
+            font-family: $bold
+          p, a
+            font-size: 18px
+          a
+            color: #000000
+            &:hover
+              color: $main
+.calc
+  &-wrap
+    display: flex
+    justify-content: space-between
+    &-right
+      display: flex
+      flex-direction: column
+      flex-basis: 25%
+    &-left
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      flex-basis: 65%
+      &-top
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        width: 100%
+        b
+          font-size: 20px
+          margin-top: 15px
+        span
+          background-color: $accent
+          display: flex
+          justify-content: center
+          align-items: center
+          width: 180px
+          height: 40px
+          font-size: 20px
+          border-radius: 13px
+          margin-bottom: 20px
+          font-family: $bold
+        input
+          padding: 20px 0
+      &-bot
+        display: flex
+        justify-content: space-between
+        width: 100%
+        div
+          display: flex
+          flex-direction: column
+          flex-basis: 25%
+          padding: 0 5px
+          b
+            font-size: 16px
+          input, select
+            background-color: $accent
+            border: none
+            border-radius: 13px
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 40px
+            margin-top: 10px
+            width: 100%
+/* range */
+
+input[type='range'] 
+  display: block
+input[type='range']:focus 
+  outline: none
+#inputDiv 
+  width: 100%
+  position: relative
+#etiqueta 
+  width: 0px
+  height: 0px
+  position: absolute
+  z-index: -11
+  background-color: transparent
+  color: white
+  font-size: 0px
+  text-align: center
+  padding-top: 0px
+  top: -45px
+
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb 
+  -webkit-appearance: none
+
+input[type=range]::-webkit-slider-thumb 
+  background-color: #fff
+  width: 30px
+  height: 30px
+  border: 3px solid #333
+  border-radius: 50%
+  margin-top: -10px
+
+input[type=range]::-moz-range-thumb 
+  background-color: $light
+  width: 15px
+  height: 15px
+  border: 3px solid #333
+  border-radius: 50%
+
+input[type=range]::-ms-thumb 
+  background-color: $light
+  width: 20px
+  height: 20px
+  border: 3px solid $light
+  border-radius: 50%
+
+/* 2.2 TRACK */
+
+input[type=range]::-webkit-slider-runnable-track 
+  background-color: #fff
+  height: 10px
+  border-radius: 10px
 
 
+input[type=range]:focus::-webkit-slider-runnable-track 
+  outline: none
 
+
+input[type=range]::-moz-range-track 
+  background-color: $light
+  height: 10px
+  border-radius: 10px
+
+
+input[type=range]::-ms-track 
+  background-color: $light
+  height: 10px
+  border-radius: 10px
+
+
+input[type=range]::-ms-fill-lower 
+  background-color: $main
+
+
+input[type=range]::-ms-fill-upper 
+  background-color: $light
 
 
 @import "media1200"
