@@ -911,6 +911,10 @@ input[type=range]::-ms-fill-upper {
   top: 20px;
 }
 
+.move-burger {
+  top: 20px !important;
+}
+
 @media (max-width: 1199px) {
   .calc-wrap-left-bot {
     -ms-flex-wrap: wrap;
@@ -1035,6 +1039,9 @@ input[type=range]::-ms-fill-upper {
 }
 
 @media (max-width: 768px) {
+  .footer-main-wrap-map {
+    padding: 20px 10px;
+  }
   .service-wrap-item {
     min-height: 175px;
   }

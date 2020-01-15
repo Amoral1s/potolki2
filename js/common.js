@@ -1,6 +1,18 @@
 $(document).ready(function () {
 
   if ($(window).width() < 992) {
+    $(window).bind('scroll', function() { 
+      var top = $(document).scrollTop();
+      if (top > 70) {
+        $('.burger').addClass('move-burger');
+       }
+      else {
+        $('.burger').removeClass('move-burger');
+       }
+    });
+  }
+
+  if ($(window).width() < 992) {
     $('.burger').on('click',() => {
       $('.header-top-wrap-center ul.menu').slideToggle(600);
       $('.burger').toggleClass('burger-active');
