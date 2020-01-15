@@ -1119,6 +1119,13 @@ input[type=range]::-ms-fill-upper {
 }
 
 @media (max-width: 440px) {
+  .service-wrap {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .service-wrap-item {
+    margin-bottom: 20px;
+  }
   .portfolio button.slick-arrow {
     top: 30%;
   }
