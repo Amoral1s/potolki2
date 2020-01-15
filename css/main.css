@@ -136,8 +136,8 @@ h1, h2, h3, h4, h5 {
           align-items: center;
   width: 320px;
   height: 60px;
-  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 0px 25px -9px rgba(120, 120, 120, 0.76);
+          box-shadow: 0px 0px 25px -9px rgba(120, 120, 120, 0.76);
   cursor: pointer;
   -webkit-transition: 0.6s;
   transition: 0.6s;
@@ -483,6 +483,8 @@ h1, h2, h3, h4, h5 {
   border-radius: 15px;
   background-color: #ffffff;
   padding: 40px;
+  -webkit-box-shadow: 0px 0px 25px -9px rgba(120, 120, 120, 0.76);
+          box-shadow: 0px 0px 25px -9px rgba(120, 120, 120, 0.76);
 }
 
 .footer-main-wrap-map img {

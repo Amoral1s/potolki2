@@ -185,7 +185,7 @@
           </b>
           <div id="inputDiv">
             <div id="etiqueta"></div>
-            <input type="range" value='65' min="0" max="100"  autocomplete="off">
+            <input class="range-input" type="range" value='65' min="0" max="100"  autocomplete="off">
             <!-- autocomplete="off" pare que Firefox no "recuerde" el valor del input "on refresh" -->
             </div>
           <span class="range-value">
@@ -195,24 +195,24 @@
         <div class="calc-wrap-left-bot">
           <div>
             <b>Количество углов</b>
-            <input type="text">
+            <input class="calc-ugol" type="number" value="4">
           </div>
           <div>
             <b>Люстры</b>
-            <select name="" id="">
-              <option value="">Нет</option>
-              <option value="">Да</option>
+            <select class="calc-big-light" name="" id="">
+              <option value="0">Нет</option>
+              <option value="2000">Да</option>
             </select>
           </div>
           <div>
             <b>Кол-во светильников</b>
-            <input type="text">
+            <input class="calc-light" type="number" value="4">
           </div>
           <div>
             <b>Обвод труб</b>
-            <select name="" id="">
-              <option value="">Нет</option>
-              <option value="">Да</option>
+            <select class="calc-trub" name="" id="">
+              <option value="0">Нет</option>
+              <option value="1000">Да</option>
             </select>
           </div>
         </div>

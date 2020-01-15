@@ -52,44 +52,56 @@ $(document).ready(function () {
   }
  
  
-  var s = document.createElement('style');
-  document.head.appendChild(s);
-  
-  var inputDiv = document.querySelector('#inputDiv');
-  var w = parseInt(window.getComputedStyle(inputDiv, null).getPropertyValue("width"));
-  /* EL INPUT */
-  var elInput = document.querySelector("input[type='range']");
-  elInput.style.width = w +"px";
-  var inputMin = elInput.getAttribute('min');
-  var inputMax = elInput.getAttribute('max');
-  var k = w/(inputMax - inputMin);
-  
-  /* LA ETIQUETA */
-  var etiqueta = document.querySelector('#etiqueta');
-  var ew = parseInt(window.getComputedStyle(etiqueta, null).getPropertyValue("width"));
-  
-  
-  /* el valor de la etiqueta (el tooltip) */
-  etiqueta.innerHTML = elInput.value;
-  /* calcula la posición inicial de la etiqueta (el tooltip) */
-  etiqueta.style.left =  ((elInput.value * k) - (ew/2))+"px";
-  /* establece el estilo inicial del TRACK */
-  s.textContent ="input[type=range]::-webkit-slider-runnable-track{ background-image:-webkit-linear-gradient(left, #4d4dff "+elInput.value+"%,#d3deff "+elInput.value+"%)}"
-  s.textContent +="input[type=range]::-moz-range-track{ background-image:-moz-linear-gradient(left, #4d4dff "+elInput.value+"%,#d3deff "+elInput.value+"%)}"
-  
-  
-  
-  elInput.addEventListener('input',function(){
-    
-  /* cambia el valor de la etiqueta (el tooltip) */
-  etiqueta.innerHTML =elInput.value;
-  /* cambia la posición de la etiqueta (el tooltip) */
-  etiqueta.style.left =  ((elInput.value * k) - (ew/2))+"px";
-  /* cambia el estilo del TRACK */
-  s.textContent ="input[type=range]::-webkit-slider-runnable-track{ background-image:-webkit-linear-gradient(left, #4d4dff "+elInput.value+"%,#d3deff "+elInput.value+"%)}"
-  s.textContent +="input[type=range]::-moz-range-track{ background-image:-moz-linear-gradient(left, #4d4dff "+elInput.value+"%,#d3deff "+elInput.value+"%)}"
-  
-  }, false);
 
+
+
+  const calc = () => {
+    const square = document.querySelector('.range-input'),
+          squareVal = document.querySelector('.range-value'),
+          ugol = document.querySelector('.calc-ugol'),
+          lightBig = document.querySelector('.calc-big-light'),
+          light = document.querySelector('.calc-light'),
+          trub = document.querySelector('.calc-trub'),
+          result = document.querySelector('.result'),
+          baseLightCost = 600,
+          baseUgol = 900,
+          baseSquare = 700;
+
+    let calculating = 0;
+
+    const calcState = () => {
+      calculating = (+square.value * +baseSquare) + ((+ugol.value - 4) * +baseUgol) + +lightBig.value + (+light.value * +baseLightCost) + +trub.value;
+    };
+
+    square.addEventListener('change', () => {
+      calcState();
+      squareVal.textContent = +square.value;
+      result.textContent = +calculating;
+    });
+    ugol.addEventListener('change', () => {
+      if (ugol.value === '' || ugol.value === 0) {
+        alert('Углов не может быть 0! Расчитайте свой потолок правильно!');
+        result.textContent = 0;
+        return;
+      }
+      calcState();
+      result.textContent = +calculating;
+    });
+    lightBig.addEventListener('change', () => {
+      calcState();
+      result.textContent = +calculating;
+    });
+    light.addEventListener('change', () => {
+      calcState();
+      result.textContent = +calculating;
+    });
+    trub.addEventListener('change', () => {
+      calcState();
+      result.textContent = +calculating;
+    });
+
+  };
+
+  calc();
 
 });
