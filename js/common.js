@@ -1,4 +1,11 @@
 $(document).ready(function () {
+
+  if ($(window).width() < 992) {
+    $('.burger').on('click',() => {
+      $('.header-top-wrap-center ul.menu').slideToggle(600);
+      $('.burger').toggleClass('burger-active');
+    });
+  }
   
   jQuery('.header-top-wrap-center ul li:has(ul)').addClass('has-children');
 
@@ -22,7 +29,14 @@ $(document).ready(function () {
       dots: false,
       arrows: true
     });
-
+  } else {
+    $('.portfolio-wrap').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      dots: false,
+      arrows: true
+    });
   }
  
  
