@@ -472,8 +472,65 @@ input[type=range]::-ms-fill-upper
     top: 20px
 .move-burger
   top: 20px!important
-  
-
+.overlay
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($main, 0.2)
+  z-index: 90
+  transition: 1s
+  transform: translateX(-500%)
+.popup
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-500%, -50%)
+  z-index: 95
+  display: flex
+  flex-direction: column
+  max-width: 320px
+  padding: 20px
+  background-color: #fff
+  border-radius: 13px
+  transition: 1s
+  div.close
+    position: absolute
+    top: 0px
+    right: 10px
+    font-size: 30px
+    cursor: pointer
+  div.small
+    font-size: 11px
+    text-align: center
+    margin-top: 15px
+    a
+      color: $main
+  div.title
+    text-align: center
+    font-size: 22px
+    margin-bottom: 10px
+    margin-top: 10px
+  input
+    border-radius: 7px
+    border: none
+    box-shadow: 0 0 5px rgba(0,0,0,0.4)
+    margin-top: 5px
+    padding: 15px
+    
+  input.button
+    min-width: 200px
+    width: 100%
+    margin-top: 25px
+  label
+    margin-top: 15px
+.popup-active
+  transform: translate(-50%, -50%)
+.overlay-active
+  transform: translateX(0)
 @import "media1200"
 @import "media992"
 @import "media768"

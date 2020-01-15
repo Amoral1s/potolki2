@@ -70,7 +70,9 @@ $(document).ready(function () {
     let calculating = 0;
 
     const calcState = () => {
-      calculating = (+square.value * +baseSquare) + ((+ugol.value - 4) * +baseUgol) + +lightBig.value + (+light.value * +baseLightCost) + +trub.value;
+      calculating = (+square.value * +baseSquare) + 
+      ((+ugol.value - 4) * +baseUgol) + +lightBig.value + 
+      (+light.value * +baseLightCost) + +trub.value;
     };
 
     square.addEventListener('change', () => {
@@ -103,5 +105,17 @@ $(document).ready(function () {
   };
 
   calc();
-
+  
+  $('.call-popup').on('click', () => {
+    $('.overlay').addClass('overlay-active');
+    $('.popup').addClass('popup-active');
+  });
+  $('.close').on('click', () => {
+    $('.overlay').removeClass('overlay-active');
+    $('.popup').removeClass('popup-active');
+  });
+  $('.overlay').on('click', () => {
+    $('.overlay').removeClass('overlay-active');
+    $('.popup').removeClass('popup-active');
+  });
 });
