@@ -41,7 +41,7 @@ a, a:hover, a:active, a:link, a:focus
 
 ol, ul 
 	list-style: none
-	font-size: 18px
+	font-size: 16px
 
 div, span, article, nav, section,main, header
 	box-sizing: border-box
@@ -49,8 +49,10 @@ div, span, article, nav, section,main, header
 	margin: 0
 input, button, select, textarea
 	padding: 10px 15px
-
-input:focus, textarea:focus, select:focus
+input[type="text"],input[type="tel"],input[type="submit"],button
+	-webkit-appearance: none
+	
+input:focus, textarea:focus, select:focus, button:focus
 	outline: none
 h1, h2, h3, h4, h5
 	width: 100%
