@@ -74,7 +74,14 @@ $(document).ready(function () {
       ((+ugol.value - 4) * +baseUgol) + +lightBig.value + 
       (+light.value * +baseLightCost) + +trub.value;
     };
-
+    
+    square.addEventListener('focus', () => {
+      calcState();
+      setInterval(function(){
+        squareVal.textContent = +square.value;
+        result.textContent = +calculating;
+      },100);
+    });
     square.addEventListener('change', () => {
       calcState();
       squareVal.textContent = +square.value;
