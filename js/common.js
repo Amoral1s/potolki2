@@ -52,7 +52,7 @@ $(document).ready(function () {
   }
  
  
-
+  const calcBlock = document.querySelector('.calc');
 
 
   const calc = () => {
@@ -110,8 +110,9 @@ $(document).ready(function () {
     });
 
   };
-
-  calc();
+  if (calcBlock) {
+    calc();
+  }
   
   $('.call-popup').on('click', () => {
     $('.overlay').addClass('overlay-active');

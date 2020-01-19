@@ -23,6 +23,7 @@
     background-color: $light
 .header
   &-top
+    padding-bottom: 20px
     &-wrap
       display: flex
       justify-content: space-between
@@ -276,6 +277,7 @@
             &:hover
               color: $main
 .calc
+  padding: 40px 0
   &-wrap
     display: flex
     justify-content: space-between
@@ -534,6 +536,122 @@ input[type=range]::-ms-fill-upper
   transform: translate(-50%, -50%)
 .overlay-active
   transform: translateX(0)
+
+.about
+  
+  &-wrap
+    div.div-button
+      display: flex
+      width: 100%
+      justify-content: center
+      margin-top: 30px
+  &-table
+    div
+      width: 100%
+      display: flex
+      justify-content: center
+      margin-top: 40px
+    table
+      border: 1px solid $main
+      padding: 20px
+      border-radius: 13px
+      table-layout: fixed
+      width: 100%
+      border-collapse: collapse
+      margin-bottom: 20px
+      td, th
+        border: 1px solid $main
+      th
+        text-align: left
+      th:nth-child(1), td:nth-child(1)
+        padding: 10px
+        width: 20%
+      th:nth-child(2), td:nth-child(2)
+        padding: 10px
+        width: 20%
+      th:nth-child(3), td:nth-child(3)
+        padding: 10px
+        width: 20%
+      th:nth-child(4), td:nth-child(4)
+        padding: 10px
+        width: 20%
+      th:nth-child(5), td:nth-child(5)
+        padding: 10px
+        width: 20%
+    
+  &-title
+    background-color: $accent
+    padding: 20px 0
+    h1
+      margin: 0 auto
+      padding-bottom: 5px
+  &-wrap
+    padding: 40px
+    border-radius: 13px
+    margin: 50px auto
+    box-shadow: 0px 0px 25px -9px rgba(120,120,120,0.76)
+    span
+      color: red
+    b
+      font-size: 16px
+      line-height: 20px
+      margin-bottom: 20px
+      display: block
+    h2
+      font-size: 26px
+      margin-bottom: 15px
+    p
+      font-size: 16px
+      line-height: 20px
+      margin-bottom: 30px
+    ol
+      padding-left: 20px
+      li
+        h3
+          margin-top: 15px
+          margin-bottom: 5px
+          font-size: 20px
+        font-size: 16px
+.portfolio-page
+  div.div-button
+    width: 100%
+    display: flex
+    justify-content: center
+    margin-top: 40px
+  div.portfolio-wrap
+    margin-top: 50px
+  div.title-container
+    width: 100%
+    background-color: $accent
+    padding: 20px 0 10px 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @import "media1200"
 @import "media992"
 @import "media768"

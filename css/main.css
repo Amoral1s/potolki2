@@ -39,7 +39,7 @@ a, a:hover, a:active, a:link, a:focus {
   outline: none;
 }
 
-ol, ul {
+ul {
   list-style: none;
   font-size: 16px;
 }
@@ -152,6 +152,10 @@ h1, h2, h3, h4, h5 {
   transition: 0.6s;
   color: #000;
   background-color: #d3deff;
+}
+
+.header-top {
+  padding-bottom: 20px;
 }
 
 .header-top-wrap {
@@ -591,6 +595,10 @@ h1, h2, h3, h4, h5 {
   color: #4d4dff;
 }
 
+.calc {
+  padding: 40px 0;
+}
+
 .calc-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1016,6 +1024,146 @@ input[type=range]::-ms-fill-upper {
           transform: translateX(0);
 }
 
+.about-wrap div.div-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+.about-table div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+}
+
+.about-table table {
+  border: 1px solid #4d4dff;
+  padding: 20px;
+  border-radius: 13px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.about-table table td, .about-table table th {
+  border: 1px solid #4d4dff;
+}
+
+.about-table table th {
+  text-align: left;
+}
+
+.about-table table th:nth-child(1), .about-table table td:nth-child(1) {
+  padding: 10px;
+  width: 20%;
+}
+
+.about-table table th:nth-child(2), .about-table table td:nth-child(2) {
+  padding: 10px;
+  width: 20%;
+}
+
+.about-table table th:nth-child(3), .about-table table td:nth-child(3) {
+  padding: 10px;
+  width: 20%;
+}
+
+.about-table table th:nth-child(4), .about-table table td:nth-child(4) {
+  padding: 10px;
+  width: 20%;
+}
+
+.about-table table th:nth-child(5), .about-table table td:nth-child(5) {
+  padding: 10px;
+  width: 20%;
+}
+
+.about-title {
+  background-color: #ebf1f4;
+  padding: 20px 0;
+}
+
+.about-title h1 {
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+.about-wrap {
+  padding: 40px;
+  border-radius: 13px;
+  margin: 50px auto;
+  -webkit-box-shadow: 0px 0px 25px -9px rgba(120, 120, 120, 0.76);
+          box-shadow: 0px 0px 25px -9px rgba(120, 120, 120, 0.76);
+}
+
+.about-wrap span {
+  color: red;
+}
+
+.about-wrap b {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.about-wrap h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.about-wrap p {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.about-wrap ol {
+  padding-left: 20px;
+}
+
+.about-wrap ol li {
+  font-size: 16px;
+}
+
+.about-wrap ol li h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.portfolio-page div.div-button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+}
+
+.portfolio-page div.portfolio-wrap {
+  margin-top: 50px;
+}
+
+.portfolio-page div.title-container {
+  width: 100%;
+  background-color: #ebf1f4;
+  padding: 20px 0 10px 0;
+}
+
 @media (max-width: 1199px) {
   .calc-wrap-left-bot {
     -ms-flex-wrap: wrap;
@@ -1140,6 +1288,52 @@ input[type=range]::-ms-fill-upper {
 }
 
 @media (max-width: 768px) {
+  .about div.button {
+    font-size: 14px !important;
+  }
+  .about-wrap h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .about-wrap table th, .about-wrap table tr {
+    font-size: 9px;
+    word-break: break-all;
+  }
+  .about-wrap table td:nth-child(1) {
+    padding: 5px;
+    width: 20%;
+  }
+  .about-wrap table td:nth-child(2) {
+    padding: 5px;
+    width: 20%;
+  }
+  .about-wrap table td:nth-child(3) {
+    padding: 5px;
+    width: 40%;
+  }
+  .about-wrap table td:nth-child(4) {
+    padding: 5px;
+    width: 10%;
+  }
+  .about-wrap table td:nth-child(5) {
+    padding: 5px;
+    width: 10%;
+  }
+  .about-wrap table td.table-dnone, .about-wrap table th.table-dnone {
+    display: none;
+  }
+  .about-wrap table.table-two th:nth-child(1), .about-wrap table.table-two td:nth-child(1) {
+    padding: 10px;
+    width: 50%;
+  }
+  .about-wrap table.table-two th:nth-child(2), .about-wrap table.table-two td:nth-child(2) {
+    padding: 10px;
+    width: 20%;
+  }
+  .about-wrap table.table-two th:nth-child(3), .about-wrap table.table-two td:nth-child(3) {
+    padding: 10px;
+    width: 30%;
+  }
   .footer-main-wrap-map {
     padding: 20px 10px;
   }
