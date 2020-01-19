@@ -279,7 +279,7 @@ h1, h2, h3, h4, h5 {
           align-items: center;
   background-image: url(../img/bg.png);
   background-size: cover;
-  background-position: center center;
+  background-position: 0 -25px;
 }
 
 .header-main button {
