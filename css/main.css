@@ -69,11 +69,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 100%;
+  margin-right: 10px !important;
+  margin-left: 10px !important;
 }
 
 .container-fluid {
@@ -1144,7 +1142,6 @@ input[type=range]::-ms-fill-upper {
 }
 
 .portfolio-page div.div-button {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1291,6 +1288,15 @@ input[type=range]::-ms-fill-upper {
   .about div.button {
     font-size: 14px !important;
   }
+  .about-wrap {
+    padding: 20px;
+  }
+  .about-wrap b, .about-wrap p, .about-wrap ul li, .about-wrap ol li {
+    font-size: 14px;
+  }
+  .about-wrap ol, .about-wrap ul {
+    padding-left: 10px;
+  }
   .about-wrap h2 {
     font-size: 20px;
     margin-bottom: 20px;
@@ -1363,6 +1369,12 @@ input[type=range]::-ms-fill-upper {
 }
 
 @media (max-width: 578px) {
+  .portfolio-page div.div-button {
+    margin-top: 15px;
+  }
+  .header-top {
+    padding-bottom: 10px;
+  }
   .burger {
     top: 100px;
   }
@@ -1414,9 +1426,13 @@ input[type=range]::-ms-fill-upper {
 }
 
 @media (max-width: 440px) {
+  #inputDiv input {
+    max-width: 100%;
+    width: 100%;
+  }
   .service-wrap {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
   .service-wrap-item {
     margin-bottom: 20px;
@@ -1438,9 +1454,6 @@ input[type=range]::-ms-fill-upper {
   .service-wrap-item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-  }
-  .service div.title {
-    padding-left: 15px;
   }
   .header-top-wrap-right {
     padding-left: 10px;
