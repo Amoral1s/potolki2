@@ -280,6 +280,7 @@ h1, h2, h3, h4, h5 {
   background-image: url(../img/bg.png);
   background-size: cover;
   background-position: 0 -25px;
+  background-repeat: no-repeat;
 }
 
 .header-main button {
