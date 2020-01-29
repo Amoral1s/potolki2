@@ -1,5 +1,13 @@
 $(document).ready(function () {
 
+    $('.accordeon').next().css('display', 'none');
+  
+  $('.accordeon').on('click', (e) => {
+      let target = e.target;
+      $(target).next().slideToggle(600);
+  });
+    
+
   if ($(window).width() < 992) {
     $(window).bind('scroll', function() { 
       var top = $(document).scrollTop();
